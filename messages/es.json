@@ -70,5 +70,8 @@
 	"delete_service_alert_desc": "¿Estás seguro de que quieres eliminar esta alerta de {service}? Puedes siempre añadirla de nuevo más tarde.",
 	"delete": "Eliminar",
 	"service_alert_deleted": "Alerta de {service} eliminada correctamente",
-	"alert_updated": "Alerta actualizada para {streamer}"
+	"alert_updated": "Alerta actualizada para {streamer}",
+	"edit_service_alert": "Editar alerta de {service}",
+	"edit_twitch_alert_desc": "Modifica la alerta de Twitch para ser notificado en tu servidor cuando tus streamers favoritos van en vivo.",
+	"meta_description": "SkyLet es un bot de Discord que te permite gestionar tu servidor con facilidad. Tiene muchas características, como notificaciones de Twitch, mensajes de bienvenida, utilidades, y más!"
 }

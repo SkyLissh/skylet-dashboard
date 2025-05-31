@@ -1,5 +1,6 @@
 import { includeIgnoreFile } from "@eslint/compat";
 import js from "@eslint/js";
+import pluginQuery from "@tanstack/eslint-plugin-query";
 import prettier from "eslint-config-prettier";
 import svelte from "eslint-plugin-svelte";
 import globals from "globals";
@@ -14,6 +15,7 @@ export default ts.config(
   js.configs.recommended,
   ...ts.configs.recommended,
   ...svelte.configs.recommended,
+  ...pluginQuery.configs["flat/recommended"],
   prettier,
   ...svelte.configs.prettier,
   {

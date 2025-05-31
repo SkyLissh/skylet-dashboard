@@ -105,6 +105,8 @@
 }
 
 @theme {
+  --font-sans: "Poppins", sans-serif;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -163,4 +165,25 @@
   --sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --sidebar-border: var(--sidebar-border);
   --sidebar-ring: var(--sidebar-ring);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@utility step {
+  counter-increment: step;
+
+  &:before {
+    @apply bg-muted border-background absolute inline-flex h-9 w-9 items-center justify-center rounded-full border-4 text-center -indent-px font-mono text-base font-medium;
+    @apply mt-[-4px] ml-[-50px];
+    content: counter(step);
+  }
 }

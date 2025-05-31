@@ -20,7 +20,11 @@
         {m.features()}
       </p>
       <div class="flex flex-col items-center gap-4 md:flex-row">
-        <Button class="w-full md:w-auto [&_svg]:size-6">
+        <Button
+          href="https://discord.com/oauth2/authorize?client_id=773336792346787840"
+          target="_blank"
+          class="w-full md:w-auto [&_svg]:size-6"
+        >
           <Discord />
           {m.add_to_discord()}
         </Button>

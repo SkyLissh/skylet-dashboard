@@ -16,6 +16,8 @@
     SheetTitle,
   } from "$lib/components/ui/sheet";
 
+  import { signIn } from "$lib/auth";
+
   import BellDot from "~icons/lucide/bell-dot";
   import ChevronDown from "~icons/lucide/chevron-down";
   import Music from "~icons/lucide/music";
@@ -79,7 +81,7 @@
   </div>
   <SheetFooter class="flex flex-col gap-2 px-6 py-4">
     <Separator />
-    <Button>
+    <Button onclick={signIn}>
       <Discord />
       {m.login()}
     </Button>
