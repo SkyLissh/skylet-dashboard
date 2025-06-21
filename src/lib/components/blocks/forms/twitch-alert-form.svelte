@@ -20,8 +20,8 @@
   import * as Form from "$lib/components/ui/form";
   import { Textarea } from "$lib/components/ui/textarea";
 
-  import ChannelsCombobox from "$lib/components/channels-combobox.svelte";
-  import TwitchChannelCombobox from "$lib/components/twitch-channel-combobox.svelte";
+  import ChannelsCombobox from "$lib/components/blocks/combobox-menus/channels-combobox.svelte";
+  import TwitchChannelCombobox from "$lib/components/blocks/combobox-menus/twitch-channel-combobox.svelte";
 
   import LoadingCircle from "~icons/lucide/loader-circle";
 
@@ -125,7 +125,9 @@
           </Form.Field>
         </div>
       </CardContent>
-      <CardFooter class="justify-end gap-4">
+      <CardFooter
+        class="flex-col items-stretch gap-4 md:flex-row md:items-center md:justify-end"
+      >
         <Button
           href={localizeHref(`/dashboard/${page.params.guild}/twitch`)}
           variant="secondary"

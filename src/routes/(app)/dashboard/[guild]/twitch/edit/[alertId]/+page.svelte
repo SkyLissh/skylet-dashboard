@@ -3,7 +3,7 @@
 
   import { m } from "$lib/paraglide/messages";
 
-  import TwitchAlertForm from "$lib/components/twitch-alert-form.svelte";
+  import TwitchAlertForm from "$lib/components/blocks/forms/twitch-alert-form.svelte";
 
   let { data }: PageProps = $props();
 </script>
@@ -11,6 +11,7 @@
 <TwitchAlertForm
   channels={data.channels}
   form={data.form}
-  title={m.add_alert({ service: "Twitch" })}
-  description={m.add_twitch_alert_desc()}
+  streamer={data.streamer ?? undefined}
+  title={m.edit_service_alert({ service: "Twitch" })}
+  description={m.edit_twitch_alert_desc()}
 />

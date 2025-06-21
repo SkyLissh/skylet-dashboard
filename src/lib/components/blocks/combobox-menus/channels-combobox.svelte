@@ -66,9 +66,9 @@
                 open = false;
               }}
             >
-              {channel.name}
+              <span class="truncate">{channel.name}</span>
 
-              <span class="text-muted-foreground text-xs uppercase">
+              <span class="text-muted-foreground truncate text-xs uppercase">
                 {#if channel.type === ChannelType.GuildText}
                   {m.text_channel()}
                 {:else if channel.type === ChannelType.GuildVoice}

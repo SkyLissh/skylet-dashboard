@@ -74,5 +74,9 @@
   "alert_updated": "Alert updated for {streamer}",
   "edit_service_alert": "Edit {service} alert",
   "edit_twitch_alert_desc": "Modify the Twitch alert to get notified on your server when your favorite streamers go live.",
-  "meta_description": "SkyLet is a Discord bot that allows you to manage your server with ease. It has a lot of features, such as Twitch notifications, welcome messages, utilities, and more!"
+  "meta_description": "SkyLet is a Discord bot that allows you to manage your server with ease. It has a lot of features, such as Twitch notifications, welcome messages, utilities, and more!",
+  "welcome_to_dashboard": "Welcome to the SkyLet dashboard!",
+  "login_to_continue": "To continue, please login with your Discord account.",
+  "edit": "Edit",
+  "alert_options": "Alert options"
 }

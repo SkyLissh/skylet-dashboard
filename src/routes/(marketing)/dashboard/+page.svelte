@@ -27,7 +27,7 @@
   });
 </script>
 
-<main class="mx-auto flex max-w-7xl flex-col gap-12 py-20">
+<main class="container mx-auto flex max-w-7xl flex-col gap-12 py-20">
   <div class="flex items-center gap-4">
     <img
       src={data.profile.avatar_url}
@@ -54,7 +54,7 @@
       <Search class="size-5" />
     </InputIcon>
   </div>
-  <ul class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+  <ul class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
     {#each filteredGuilds as guild}
       <li>
         <article class="border-border bg-card text-card-foreground rounded-2xl border">

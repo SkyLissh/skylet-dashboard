@@ -14,8 +14,6 @@
 
   import ChevronDown from "~icons/lucide/chevron-down";
 
-  const { class: className } = $props();
-
   const FLAG_CODES = {
     en: "us",
     es: "mx",
@@ -32,7 +30,7 @@
 <DropdownMenu>
   <DropdownMenuTrigger>
     {#snippet child({ props })}
-      <Button {...props} variant="ghost" class={className}>
+      <Button {...props} variant="ghost">
         <img
           src={`https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/flags/4x3/${FLAG_CODES[currentLocale]}.svg`}
           alt={LANGUAGE_NAMES[currentLocale]}

@@ -16,7 +16,6 @@
 
   import { m } from "$lib/paraglide/messages";
 
-  import MainHeader from "$lib/components/main-header.svelte";
   import { Toaster } from "$lib/components/ui/sonner";
 
   let { children, data }: LayoutProps = $props();
@@ -54,7 +53,6 @@
 
 <QueryClientProvider client={data.queryClient}>
   <Toaster richColors />
-  <MainHeader user={data.profile} />
   {@render children()}
   <SvelteQueryDevtools />
 </QueryClientProvider>

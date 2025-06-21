@@ -1,7 +1,7 @@
 <script lang="ts">
   import { m } from "$lib/paraglide/messages";
 
-  import LanguageDropdown from "$lib/components/language-dropdown.svelte";
+  import LanguageDropdown from "$lib/components/blocks/language-dropdown.svelte";
   import { Button } from "$lib/components/ui/button";
   import {
     Collapsible,
@@ -16,20 +16,25 @@
     SheetTitle,
   } from "$lib/components/ui/sheet";
 
-  import { signIn } from "$lib/auth";
+  import { auth, signIn } from "$lib/auth";
 
   import BellDot from "~icons/lucide/bell-dot";
   import ChevronDown from "~icons/lucide/chevron-down";
+  import LogOut from "~icons/lucide/log-out";
   import Music from "~icons/lucide/music";
   import User from "~icons/lucide/user";
   import Wrench from "~icons/lucide/wrench";
   import Discord from "~icons/simple-icons/discord";
+
+  import type { DiscordProfile } from "$lib/schemas/discord-profile";
+
+  let { user }: { user: DiscordProfile | null } = $props();
 </script>
 
 <SheetContent side="left" class="flex flex-col p-0">
   <SheetHeader class="border-border border-b p-6">
     <SheetTitle class="flex items-center gap-4">
-      <img src="/logo.png" alt="SkyLet" class="size-10 rounded-full" />
+      <img src="/logo.png" alt={m.skylet()} class="size-10 rounded-full" />
       <p class="text-lg font-semibold tracking-wide md:text-xl">{m.skylet()}</p>
     </SheetTitle>
   </SheetHeader>
@@ -77,13 +82,22 @@
         </ul>
       </CollapsibleContent>
     </Collapsible>
-    <LanguageDropdown class="mt-auto" />
+    <div class="mx-auto mt-auto">
+      <LanguageDropdown />
+    </div>
   </div>
   <SheetFooter class="flex flex-col gap-2 px-6 py-4">
     <Separator />
-    <Button onclick={signIn}>
-      <Discord />
-      {m.login()}
-    </Button>
+    {#if user}
+      <Button onclick={auth.signOut}>
+        <LogOut />
+        {m.logout()}
+      </Button>
+    {:else}
+      <Button onclick={signIn}>
+        <Discord />
+        {m.login()}
+      </Button>
+    {/if}
   </SheetFooter>
 </SheetContent>

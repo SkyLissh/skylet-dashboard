@@ -54,22 +54,7 @@ export async function getSession({
   });
 
   if (!session && shouldRedirect) {
-    const signIn = await auth.api.signInSocial({
-      body: {
-        provider: "discord",
-        callbackURL: "/dashboard",
-        scopes: [
-          "identify",
-          "email",
-          "guilds",
-          "guilds.members.read",
-          "role_connections.write",
-        ],
-      },
-    });
-
-    if (signIn.redirect) throw redirect(302, signIn.url!);
-    throw new Error("No session");
+    throw redirect(308, "/dashboard/welcome");
   }
 
   return session;
