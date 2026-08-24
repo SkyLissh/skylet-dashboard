@@ -50,7 +50,3 @@ Requires Node 20+. Set up a Turso/libSQL DB and auth env vars. Opens on the defa
 - Type-safe forms (superforms + valibot) and TanStack Query
 - Compile-time i18n (paraglide)
 - A complete, accessible bits-ui component kit on Tailwind v4
-
----
-
-*Built by [Alisson "SkyLissh" Hernandez] — SvelteKit, TypeScript, and full-stack web. This is a personal portfolio project.*
